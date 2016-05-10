@@ -1,0 +1,17 @@
+{% extends "ParaSpin/layout.html" %}
+{% block content %}
+
+ <h3> Spin Output </h3>
+
+
+<h6>{</h6>
+{% for spun in spun %}
+	<h6>{{spun|linebreaks}}</h6>
+	<h6> | </h6>
+{% endfor %}
+<h6>}</h6>
+
+
+
+
+{% endblock %}

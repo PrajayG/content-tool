@@ -1,0 +1,28 @@
+{% extends "ParaSpin/layout.html" %}
+{% block content %}
+
+<div class='container'>
+	{% if edits %}
+			<table class="bordered">
+			<thead>
+				<tr> 
+					<th>Page</th>
+					<th>Type of Edit</th>
+				</tr>
+			</thead>
+			<body>
+				{% for key, value in edits.items %}
+					<tr>
+						<td>{{ key }}</td>
+						<td>{{ value }}</td>
+					</tr>
+				{% endfor %}
+			</body>
+		</table>
+	{% else %}
+		<p>Nothing was found, please try again</p>
+	{% endif %}
+</div>
+
+
+{% endblock %}

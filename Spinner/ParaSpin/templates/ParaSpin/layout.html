@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+<div class='container'>
+	<header>
+		<nav>
+    		<div class="nav-wrapper indigo lighten-2">
+	      		<a href="#" class="brand-logo left">Content Tool</a>
+	      			<ul id="nav-mobile" class="right hide-on-med-and-down">
+	        		<li><a href="{% url 'paraspin:para4' %}">4 Paragraphs</a></li>
+	        		<li><a href="{% url 'paraspin:main' %}">3 Paragraphs</a></li>
+	        		<li><a href="{% url 'paraspin:wikipedia' %}">Wikipedia Edit Finder</a>
+	        		<li><a href="{% url 'paraspin:wikichecker' %}">Wikipedia Change Detection</a>
+	        		</li>
+	        	</ul>
+    		</div>
+ 		 </nav>
+ 	</header>
+<div class="switch">
+  
+{% block content %}
+{% endblock %}
+
+
+ <script src="{% static 'js/materialize.min.js' %}"></script>
+</div>

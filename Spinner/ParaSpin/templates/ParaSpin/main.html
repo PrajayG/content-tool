@@ -1,0 +1,25 @@
+
+{% extends "ParaSpin/layout.html" %}
+<div class='container'>
+	<div class='jumbotron'>
+	<header>
+		<ul class="nav nav-pills nav-justified">
+	  		<li role="presentation" class="active"><a href="#">Home</a></li>
+	  		<li role="presentation"><a href="#">ParaSpin</a></li>
+	  		<li role="presentation"><a href="#">Wiki</a></li>
+		</ul>
+	</div>
+	</header>
+	{% block content %}
+		<h1> Please enter your paragraphs</h1>
+
+			<div class='input-group'>
+				<form action="/paraspin/" method="post">
+				{% csrf_token %}
+				{{ ParaForm }}
+				<input type="submit" value="submit" />
+				</form>
+			<div>
+	{% endblock %}
+	
+</div>
